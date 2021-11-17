@@ -1,0 +1,38 @@
+Project
+    -Name
+    -Created At
+    -Task States
+
+Task State
+    -Name
+    -Created At
+    -Ordinal
+    -Task List
+
+Task
+    -Name
+    -Created At
+    -Description (Full Text)
+
+Project
+    -id (long)
+    -name (string)
+    -createdAt (time)
+    -taskStates (Task State[])
+
+TaskState
+    -id (long)
+    -name (string)
+    -ordinal (long)
+    -createdAt (time)
+    -tasks (Task[])
+
+Task
+    -id (long)
+    -name (string)
+    -description (string)
+    -createdAt (time)
+
+-DB Entities
+-DB Entity managment
+-REST API (bussines logic layer)
