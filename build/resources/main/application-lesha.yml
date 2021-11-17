@@ -1,0 +1,10 @@
+---
+    server:
+        port: 9192
+
+        spring:
+            datasource:
+                url:
+                username:
+                password:
+                driver-class-name:

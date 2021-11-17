@@ -1,0 +1,10 @@
+---
+    server:
+      port: 8080
+
+    spring:
+      datasource:
+        url: jdbc:postgresql://localhost/task-tracker
+        username: postgres
+        password: t2120112!
+        driver-class-name: org.postgresql.Driver
