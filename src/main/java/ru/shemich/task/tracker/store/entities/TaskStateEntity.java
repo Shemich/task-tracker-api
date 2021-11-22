@@ -20,7 +20,7 @@ public class TaskStateEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    Long Id;
+    Long id;
 
     @Column(unique = true)
     String name;
@@ -33,6 +33,7 @@ public class TaskStateEntity {
 
     @Builder.Default
     @OneToMany
+    @JoinColumn(name = "task_state_id", referencedColumnName = "id")
     List<TaskEntity> tasks = new ArrayList<>();
 
 }
