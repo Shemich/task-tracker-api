@@ -17,7 +17,7 @@ import java.util.List;
 @FieldDefaults(level = AccessLevel.PRIVATE) //экспериментальная фича, аккуратнее с ее использованием
 @Entity
 @Table(name = "project")
-public class ProjectEnity {
+public class ProjectEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
@@ -27,11 +27,14 @@ public class ProjectEnity {
     String name;
 
     @Builder.Default
+    Instant updateAt = Instant.now();
+
+    @Builder.Default
     Instant createdAt = Instant.now();
 
     @Builder.Default
     @OneToMany
-    @JoinColumn(name = "project_id", referencedColumnName = "id")
+    @JoinColumn(name = "project_id")
     List<TaskStateEntity> taskStates = new ArrayList<>();
 
 }
